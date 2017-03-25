@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SingleScreenApp</string>
+    <string name="co_name">ALعARRAB Co.</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="refining">Refining</string>
+    <string name="onshore_drilling">Onshore drilling</string>
+    <string name="offshore_drilling">Offshore drilling</string>
+    <string name="our_services">Our services:</string>
+    <string name="contact">Contact us:</string>
+    <string name="location">Some where on earth!</string>
+    <string name="phone">Call me if you can!</string>
+</resources>
