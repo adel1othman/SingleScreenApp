@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     static ImageView comPic;
     static TextView comText;
     static ScrollView myScrollView;
+    int myWidth, myHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +33,22 @@ public class MainActivity extends AppCompatActivity {
         comText = (TextView)findViewById(R.id.comText);
         comPic = (ImageView) findViewById(R.id.comPic);
 
-        /*int myWidth = this.getResources().getDisplayMetrics().widthPixels;
-        int myHeight = this.getResources().getDisplayMetrics().heightPixels;*/
+        /*myWidth = this.getResources().getDisplayMetrics().widthPixels;
+        myHeight = this.getResources().getDisplayMetrics().heightPixels;*/
 
         comPic.setOnTouchListener(new MyTouchListener(comPic));
     }
 
-    /*@Override
+    @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            comPic.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            myHeight = this.getResources().getDisplayMetrics().heightPixels;
+            myWidth = this.getResources().getDisplayMetrics().widthPixels;
+            //comPic.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-            comPic.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            //comPic.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         }
-    }*/
+    }
 }
